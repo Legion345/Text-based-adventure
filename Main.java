@@ -24,6 +24,9 @@ public class Main {
 
         System.out.println("\nWelcome to the Dungeon!");
 // TODO Add Health bar to Command line
+// TODO Add backpack size
+// TODO Add Inventory
+// TODO Add more items for pick up
 
         GAME:
         while(running) {
