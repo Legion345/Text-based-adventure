@@ -27,6 +27,8 @@ public class Main {
 // TODO Add backpack size
 // TODO Add Inventory
 // TODO Add more items for pick up
+// TODO Make Turn-based
+// TODO Enemy specific to location
 
         GAME:
         while(running) {
@@ -53,7 +55,7 @@ public class Main {
                     health -= damageTaken;
 
                     System.out.println("\t> You strike the " + enemy + " for " + damageDealt + " damage.");
-                    System.out.println("\t> You have taken " + damageTaken + " damage in retaliation!");
+                    System.out.println("\t> You have taken " + damageTaken + " damage in retaliation!\n");
 
                     if(health < 1) {
                         System.out.println("\t> You have taken too much damage, you are too weak to go on!");
@@ -67,7 +69,7 @@ public class Main {
                         numHealthPotions--;
                         System.out.println("\t> You drink a health potion, healing yourself for " + healthPotionHealAmount + " HP."
                                          + "\n\t> You now have " + health + " HP."
-                                         + "\n\t> You have " + numHealthPotions + "  health potions left.\n");
+                                         + "\n\t> You have " + numHealthPotions + " health potions left.\n");
                     }
                     else  {
                         System.out.println("\t> You have no health potions left! Defeat enemies for a chance to get one.");
@@ -98,7 +100,7 @@ public class Main {
             if(rand.nextInt(100) < healthPotionDropChance) {
                 numHealthPotions++;
                 System.out.println(" # The " + enemy + " dropped a health potion! #");
-                System.out.println(" # You now have " + numHealthPotions + "health potion(s). #");
+                System.out.println(" # You now have " + numHealthPotions + " health potion(s). #");
             }
             System.out.println("---------------------------------------");
             System.out.println("What would you like to do now?");
