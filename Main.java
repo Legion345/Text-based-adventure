@@ -28,13 +28,15 @@ public class Main {
 // TODO Add Inventory
 // TODO Add more items for pick up
 // TODO Make Turn-based
+// TODO Locations
 // TODO Enemy specific to location
+// TODO Add weapons and make damage specific
 
         GAME:
         while(running) {
             System.out.println("---------------------------------------\n");
 
-            int enemyHealth = rand.nextInt(maxEnemyHealth);
+            int enemyHealth = maxEnemyHealth;
             String enemy = enemies[rand.nextInt(enemies.length)];
             System.out.println("\t# " + enemy + " appeared! #\n");
 
